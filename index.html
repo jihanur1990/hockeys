@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hockey's</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-        .menu-a{
-            background: transparent;
-            color: brown;
+        .main-heading{
+            font-size: 36px;
+            color: #131318;
         }
-        .button-primary{
+        .heading-4{
+          font-size: 28px;
+          color: white;
+          font-weight: 800;
+        }
+        .heading-5{
+          font-size: 20px;
+          color: black;
+          font-weight: 800;
+        }
+        /*.button-primary{
             color: aliceblue;
             padding:16px 32px;
             border-width: 2px;
@@ -20,102 +34,243 @@
             border-radius: 16px;
             box-shadow: none;
             transition: 300ms ease-in-out;
-        }
+        }*/
         .button-primary:hover{
             color: black;
             background-color:transparent;
             box-shadow: none;
         }
+        .font-manrope{
+          font-family: 'Manrope', sans-serif;
+        }
+        .normal-text{
+          color:#424247;
+        }
+        .quotation::after {
+              content: '\275C';
+              size: 36px;
+              color:#FF4240;
+        }
     </style>
 </head>
-<body>
-    <header class="border-2 border-red-500 bg-slate-400">
-        <div class="w-[90%] mx-auto my-16 border-2 border-red-950 space-y-10">
+<body class="font-manrope">
+    <header>
+        <div class="w-[90%] max-w-[1170px] mx-auto my-8 lg:my-10">
             <!--- navbar-start-->
-            <div class="navbar bg-base-100 items-center">
+            <div class="navbar bg-base-100 items-center mb-4">
                 <div class="navbar-start">
                   <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabindex="0" class="normal-text menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                       <li><a>Home</a></li>
                       <li><a>About</a></li>
                       <li><a>Pages</a></li>
                       <li><a>Contact</a></li>
                     </ul>
                   </div>
-                  <a class="text-5xl font-bold">Hockey<span class="text-red-600">'</span>s</a>
+                  <a class="main-heading font-extrabold">Hockey<span class="quotation"></span>s</a>
                 </div>
-                <div class="navbar-center hidden lg:flex">
+                <div class="navbar-center hidden lg:flex normal-text">
                   <ul class="menu menu-horizontal">
-                      <li ><a class="hover:bg-transparent text-black hover:text-red-500">Home</a></li>
-                      <li><a class="hover:bg-transparent text-black hover:text-red-500">About</a></li>
-                      <li><a class="hover:bg-transparent text-black hover:text-red-500">Pages</a></li>
-                      <li><a class="hover:bg-transparent text-black hover:text-red-500">Contact</a></li>
+                      <li ><a>Home</a></li>
+                      <li><a >About</a></li>
+                      <li><a >Pages</a></li>
+                      <li><a>Contact</a></li>
                   </ul>
                 </div>
                 <div class="navbar-end">
                     <button class="btn btn-circle bg-transparent hidden lg:flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <img src="./Images/search.svg" alt="">
                     </button>
-                  <a class="button-primary ml-4">Get Ticket</a>
+                  <a class="btn btn-praimary py-3 px-6 ml-2 bg-[#FF4240] text-white font-bold border-2-[#FF4240] hover:bg-transparent hover:text-[#424247]">Get Ticket</a>
                 </div>
             </div>
             <!--carousel-->
-            <div class="carousel relative w-full mx-auto border-2 border-red-950">
+            <div class="carousel-container w-full relative">
+              <div class="carousel relative w-full mx-auto">
                 <div id="slide1" class="carousel-item relative w-full">
                   <img src="./Images/1.png" class="w-full" />
                   <div class="absolute flex gap-5 transform -translate-x-1/2 left-1/2 bottom-5 lg:hidden">
-                    <a href="#slide3" class="btn btn-circle">❮</a> 
-                    <a href="#slide2" class="btn btn-circle">❯</a>
+                    <a href="#slide3" class="btn btn-circle bg-black text-white">❮</a> 
+                    <a href="#slide2" class="btn btn-circle bg-black text-white">❯</a>
                   </div>
                   <div class="absolute gap-5 left-5 bottom-5 hidden lg:flex">
-                    <a href="#slide3" class="btn btn-circle">❮</a> 
-                    <a href="#slide2" class="btn btn-circle">❯</a>
+                    <a href="#slide3" class="btn btn-circle bg-black text-white">❮</a> 
+                    <a href="#slide2" class="btn btn-circle bg-black text-white">❯</a>
                   </div>
                 </div> 
                 <div id="slide2" class="carousel-item relative w-full">
                   <img src="./Images/c-2.jpg" class="w-full" />
                   <div class="absolute flex gap-5 transform -translate-x-1/2 left-1/2 bottom-5 lg:hidden">
-                    <a href="#slide1" class="btn btn-circle">❮</a> 
-                    <a href="#slide3" class="btn btn-circle">❯</a>
+                    <a href="#slide1" class="btn btn-circle bg-black text-white">❮</a> 
+                    <a href="#slide3" class="btn btn-circle bg-black text-white">❯</a>
                   </div>
                   <div class="absolute gap-5 left-5 bottom-5 hidden lg:flex">
-                    <a href="#slide1" class="btn btn-circle">❮</a> 
-                    <a href="#slide3" class="btn btn-circle">❯</a>
+                    <a href="#slide1" class="btn btn-circle bg-black text-white">❮</a> 
+                    <a href="#slide3" class="btn btn-circle bg-black text-white">❯</a>
                   </div>
                 </div> 
                 <div id="slide3" class="carousel-item relative w-full">
                   <img src="./Images/c-3.jpg" class="w-full" />
                   <div class="absolute flex gap-5 transform -translate-x-1/2 left-1/2 bottom-5 lg:hidden">
-                    <a href="#slide2" class="btn btn-circle">❮</a> 
-                    <a href="#slide1" class="btn btn-circle">❯</a>
+                    <a href="#slide2" class="btn btn-circle bg-black text-white">❮</a> 
+                    <a href="#slide1" class="btn btn-circle bg-black text-white">❯</a>
                   </div>
                   <div class="absolute gap-5 left-5 bottom-5 hidden lg:flex">
-                    <a href="#slide2" class="btn btn-circle">❮</a> 
-                    <a href="#slide1" class="btn btn-circle">❯</a>
+                    <a href="#slide2" class="btn btn-circle bg-black text-white">❮</a> 
+                    <a href="#slide1" class="btn btn-circle bg-black text-white">❯</a>
                   </div>
-                </div> 
-            </div>
-        </div>
-
+                </div>
+              </div>
+              <div class=" lg:absolute w-full badge badge-neutral rounded-xl lg:w-fit h-fit lg:right-5 lg:bottom-5 flex flex-col mx-auto">
+                <h3 class="py-4 font-extrabold text-2xl">Meet all the heroes from the field</h3>
+                <p class="pb-4 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
+                    Earum et consectetur, voluptate in eligendi numquam amet <br>
+                    quibusdam fuga!
+                  </p>
+              </div> 
+            </div> 
+         </div>
     </header>
    <main>
-    
-   </main>
-    <footer>
-        <!--<div class=" lg:absolute badge badge-neutral rounded-xl  lg:w-fit h-fit lg:right-5 lg:bottom-5 flex flex-col mx-auto">
-            <h3 class="py-4">Meet all the heroes from the field</h3>
-            <p class="pb-4 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
-                Earum et consectetur, voluptate in eligendi numquam amet <br>
-                quibusdam fuga!
+    <!-----------Professional Hockeys Club--------->
+     <div class="w-[90%] max-w-[1170px] mx-auto border-y-2 border-dashed lg:my-12">
+        <div class="text-center py-7">
+          <h1 class=" text-xl font-extrabold lg:main-heading">Professional Hockeys Club</h1>
+          <p class="text-base normal-text mt-4 opacity-60">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat <br> dolor. Purus urna in sit nullam proin. </p>
+        </div>
+     </div>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:justify-between w-[90%] max-w-[1170px] mx-auto">
+          <div class="text-center space-y-3 my-4 lg:my-0">
+              <div class="radial-progress rotate-[130deg]" style="--value:87; color:#FF4240" role="progressbar">      <span class="text-black font-bold -rotate-[130deg]">70%</span>
+              </div>
+              <h6 class="text-xl font-semibold">Prayer Facility</h6>
+              <p class="normal-text">Amet consectetur. Condimentum <br> dignissim adipiscing</p>
+          </div>
+          <div class="text-center space-y-3 my-4 lg:my-0">
+              <div class="radial-progress text-green-600 rotate-[130deg]" style="--value:95;"       role="progressbar"><span class="text-black font-bold -rotate-[130deg]">95%</span>
+              </div>
+              <h6 class="text-xl font-semibold">Experienced Coach</h6>
+              <p class="normal-text">Amet consectetur. Condimentum <br> dignissim adipiscing</p>
+          </div>
+          <div class="text-center space-y-3 my-4 lg:my-0">
+              <div class="radial-progress text-amber-600 rotate-[130deg]" style="--value:90;"   role="progressbar"><span class="text-black font-bold -rotate-[130deg]">90%</span>
+              </div>
+              <h6 class="text-xl font-semibold">Senior Player</h6>
+              <p class="normal-text">Amet consectetur. Condimentum <br> dignissim adipiscing</p>
+          </div>
+            <div class="text-center space-y-3 my-4 lg:my-0">
+                <div class="radial-progress text-blue-600 rotate-[130deg]" style="--value:80;"   role="progressbar"><span class="text-black font-bold -rotate-[130deg]">80%</span>
+                </div>
+                <h6 class="text-xl font-semibold">Training Ground</h6>
+                <p class="normal-text">Amet consectetur. Condimentum <br> dignissim adipiscing</p>
+            </div>
+      </div>
+
+      <!-----------------Program Section------------------->
+      <div class="w-[90%] max-w-[1170px] mx-auto border-y-2 border-dashed lg:my-12">
+        <div class="text-center py-7">
+          <h1 class=" text-xl font-extrabold lg:main-heading">Program Sections</h1>
+          <p class="text-base normal-text mt-4 opacity-90">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. <br> Purus urna in sit nullam proin.</p>
+        </div>
+      </div>
+      <div class="w-[90%] max-w-[1170px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5 lg:my-12">
+        <div class="card shadow-xl image-full bg-[url('./Images/2.png')] bg-cover">
+          <div class="card-body mt-20">
+            <h2 class="card-title">Junior Program</h2>
+            <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit 
+              enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et in.</p>
+            <div class="card-actions justify-start">
+              <button class="btn btn-primary bg-[#FF4240] border-none hover:bg-red-700">Register Now!</button>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow-xl image-full bg-[url('./Images/3.png')] bg-cover">
+          <div class="card-body mt-20">
+            <h2 class="card-title">Teenager Program</h2>
+            <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit 
+              enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et in.
             </p>
-
-
-            transform -translate-y-1/2 left-5 right-5 top-1/2
-      </div>-->
-    </footer>
+            <div class="card-actions justify-start">
+              <button class="btn btn-primary bg-[#FF4240] border-none hover:bg-red-700">Register Now!</button>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow-xl image-full bg-[url('./Images/4.png')] bg-cover lg:col-span-2">
+          <div class="card-body mt-20">
+            <h2 class="card-title">Professional Program</h2>
+            <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit 
+              enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et in.</p>
+            <div class="card-actions justify-start">
+              <button class="btn btn-primary bg-[#FF4240] border-none hover:bg-red-700">Register Now!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-[90%] max-w-[1170px] mx-auto border-y-2 border-dashed lg:my-12">
+        <div class="text-center py-7">
+          <h1 class=" text-xl font-extrabold lg:main-heading">Our New Products</h1>
+          <p class="text-base normal-text mt-4 opacity-90">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. <br> Purus urna in sit nullam proin.</p>
+        </div>
+      </div>
+        <div class="w-[90%] max-w-[1170px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5 lg:my-12">
+          <div class="card card-side border-2 px-3">
+            <figure><img src="./Images/5.png" alt=""/></figure>
+            <div class="card-body">
+              <div class="flex gap-4">
+                <div class="inline-flex">
+                  <img src="./Images/star.png" alt="">5.0
+                </div>
+                <div class="inline-flex">
+                  <img src="./Images/view.png" alt="">50
+                </div>
+                <div class="inline-flex">
+                  <img src="./Images/like.png" alt="">200
+                </div>
+              </div>
+              <h2 class="card-title">World Cup Flags Football</h2>
+              <p>Dolor sit amet consectetur. Ut urna diam <br> quis sagittis. </p>
+              <div class="flex gap-5">
+                <h6 class="text-[#FF4240] font-extrabold">Price - $22.00</h6>
+                <div class="inline-flex">
+                  <img src="./Images/shoping-card.svg" alt="">
+                  <p>Delivery Fee : Free</p>
+                </div>
+              </div>             
+            </div>
+          </div>
+          <div class="card card-side bg-base-100">
+            <figure><img src="./Images/6.png" alt=""/></figure>
+            <div class="card-body space-y-3">
+              <div class="flex gap-4">
+                <div class="inline-flex">
+                  <img src="./Images/star.png" alt="">5.0
+                </div>
+                <div class="inline-flex">
+                  <img src="./Images/view.png" alt="">50
+                </div>
+                <div class="inline-flex">
+                  <img src="./Images/like.png" alt="">200
+                </div>
+              </div>
+              <h2 class="card-title">World Cup Flags Football</h2>
+              <p>Dolor sit amet consectetur. Ut urna diam <br> quis sagittis. </p>
+              <div class="flex gap-5">
+                <h6 class="text-[#FF4240] font-extrabold">Price - $22.00</h6>
+                <div class="inline-flex">
+                  <img src="./Images/shoping-card.svg" alt="">
+                  <p>Delivery Fee : Free</p>
+                </div>
+              </div>             
+            </div>
+          </div>
+        </div>  
+   </main>
+  <footer>
+    
+  </footer>
     
 </body>
 </html>
